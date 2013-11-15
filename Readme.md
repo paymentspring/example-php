@@ -15,6 +15,7 @@ $ cd example-php
 ```
 
 Run it:
+
 If you are using PHP 5.4 you can run this example application using the built-in webserver as follows:
 ```Shell
 $ git clone git://github.com/paymentspring/example-php.git
