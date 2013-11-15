@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PaymentSpring Demo site</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+                <header>
+                        <img src="img/logo-header.png" alt="PaymentSpring">
+                </header>
+
+                <section role="main">
+                <ul id="card_errors" class="errors">
+                                <li style="display: none"></li>
+                                   <?php if(isset($errors)) foreach($errors as $error) { ?>
+                                      <li><?=$error->message?></li>
+                                   <?php } ?>
+                        </ul>
+ <form action="/" method="post" id="form" novalidate>
+                                <p class="price"><strong>Amount:</strong> $20.00</p>
+                                <label for="name">Cardholder Name</label>
+                                <input type="text" id="name">
+                                <label for="cc">Credit Card Number</label>
+                                <input type="text" id="cc" pattern="\d*">
+                                <label for="cvc">CVC</label>
+                                <input type="text" id="cvc" pattern="\d*">
+
+                                <label for="date">Expiration Date</label>
+                                <input type="text" id="date">
+                                <p class="warning">Since this account is using test keys, you must use <a href="https://www.paymentspring.com/docs/test_data">valid test card data</a></p>
+                                <input type="hidden" name="token" id="token">
+                                <input type="button" onClick="makeToken()" value="Charge">
+                        </form>
+                </section>
+
+                <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+                <script src="https://www.paymentspring.com/js/paymentspring.js"></script>
+                <script src="/js/jquery.payment.js"></script>
+                <script src="/js/main.js"></script>
+    </body>
+</html>
