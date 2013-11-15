@@ -7,13 +7,21 @@ To have the transactions show up in your PaymentSpring dashboard, replace the pu
 
 For complete documentation, checkout: [https://www.paymentspring.com/docs/api/rest](https://www.paymentspring.com/docs/api/rest)
 
-Run this app by:
+Checkout the code:
 
+```Shell
+$ git clone git://github.com/paymentspring/example-php.git
+$ cd example-php
+```
+
+Run it:
+If you are using PHP 5.4 you can run this example application using the built-in webserver as follows:
 ```Shell
 $ git clone git://github.com/paymentspring/example-php.git
 $ cd example-php
 $ php -S localhost:8080
 ```
+If you are using an older version of PHP you'll need a web server with PHP installed.
 
 -------------------
 Go to [https://www.paymentspring.com](https://www.paymentspring.com), create an account, and open up your dashboard. Save your API keys from the Account menu somewhere safe.
