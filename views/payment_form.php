@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -25,7 +25,7 @@
                                       <li><?=$error->message?></li>
                                    <?php } ?>
                         </ul>
- <form action="/" method="post" id="form" novalidate>
+ <form method="post" id="form" novalidate>
                                 <p class="price"><strong>Amount:</strong> $20.00</p>
                                 <label for="name">Cardholder Name</label>
                                 <input type="text" id="name">
@@ -44,7 +44,7 @@
 
                 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
                 <script src="https://www.paymentspring.com/js/paymentspring.js"></script>
-                <script src="/js/jquery.payment.js"></script>
-                <script src="/js/main.js"></script>
+                <script src="js/jquery.payment.js"></script>
+                <script src="js/main.js"></script>
     </body>
 </html>
