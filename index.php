@@ -1,8 +1,10 @@
 <?php
+DEFINE("PRIVATE_API_KEY", "test_25e414a1213973ea81a7ceaec9");
+
 if($_POST && $_POST['token']) {
 
    $ch = curl_init();
-   curl_setopt($ch, CURLOPT_URL, "https://test_25e414a1213973ea81a7ceaec9:@api.paymentspring.com/api/v1/charge");
+   curl_setopt($ch, CURLOPT_URL, "https://".PRIVATE_API_KEY.":@api.paymentspring.com/api/v1/charge");
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
    curl_setopt($ch, CURLOPT_POST, true);
 
